@@ -1,0 +1,37 @@
+{   
+
+    "addSimpNote" : true,
+    "addTradNote" : true,
+    "addCantoNote" : true,
+    "Profiles" : ["all"], 
+    "BopomofoTonesToNumber" : true,
+    "hanziConversion" : "None",
+    "readingConversion" : "None",
+    "AutoCssJsGeneration": true,
+    "ReadingType": "pinyin",
+    "SimplifiedField" : "Simplified;overwrite",
+    "TraditionalField" : "Traditional;overwrite",
+    "SimpTradField" : "Traditional;overwrite",
+    "traditionalIcons" : false,
+    "FontSize": 75,
+    "CantoneseTones123456" : ["#E60000","#E68A00", "#00802B", "#005CE6","#AC00E6", "gray"],
+    "MandarinTones12345" : ["#E60000","#E68A00", "#00802B", "#005CE6","gray"],
+    "ActiveFields": [
+                    "hanzi;all;Migaku Chinese (HK);Reading;Expression;front;jyutping",
+                    "coloredhanzireading;all;Migaku Chinese (HK);Reading;Expression;back;jyutping",
+                    "coloredhover;all;Migaku Chinese (HK);Reading;Meaning;back;jyutping",
+                    "hanzi;all;Migaku Chinese (HK);Reading;Simplified;back;jyutping",
+                    "hanzi;all;Migaku Chinese (ZH);Reading;Expression;front;pinyin",
+                    "coloredhanzireading;all;Migaku Chinese (ZH);Reading;Expression;back;pinyin",
+                    "coloredhover;all;Migaku Chinese (ZH);Reading;Meaning;back;pinyin",
+                    "hanzi;all;Migaku Chinese (ZH);Reading;Traditional;back;pinyin", 
+                    "hanzi;all;Migaku Chinese (TW);Reading;Expression;front;bopomofo",
+                    "coloredhanzireading;all;Migaku Chinese (TW);Reading;Expression;back;bopomofo",
+                    "coloredhover;all;Migaku Chinese (TW);Reading;Meaning;back;bopomofo",
+                    "hanzi;all;Migaku Chinese (TW);Reading;Simplified;back;bopomofo"
+                    
+                    ],
+    "lastId": false, 
+    "displayAgain": true
+
+}
