@@ -212,9 +212,9 @@ class CSSJSHandler():
         if displayTypeError != '':
             miInfo('The following entries have an incorrect display type. Valid display types are "Hover", "ColoredHover", "Hanzi", "ColoredHanzi", "HanziReading", "ColoredHanziReading", "Reading", and "ColoredReading".\n' + syntaxErrors, level="err")
             return (wrapperDict,False);
-        if notFoundErrors != '':
-            miInfo('The following entries have incorrect values that are not found in your Anki collection. Please review these entries and fix any spelling mistakes.\n\n' + notFoundErrors, level="err")
-            return (wrapperDict,False);
+        # if notFoundErrors != '':
+        #     miInfo('The following entries have incorrect values that are not found in your Anki collection. Please review these entries and fix any spelling mistakes.\n\n' + notFoundErrors, level="err")
+        #     return (wrapperDict,False);
         if fieldConflictErrors != '':
             miInfo('You have entries that point to the same field and the same side. Please make sure that a field and side combination does not conflict.\n\n' + fieldConflictErrors, level="err")
             return (wrapperDict,False);
@@ -266,8 +266,7 @@ class CSSJSHandler():
                     t = self.removeChineseConverterFromTemplate(t)
                     t['qfmt'] = self.removeChineseJs(self.removeWrappers(t['qfmt']))
                     t['afmt'] = self.removeChineseJs(self.removeWrappers(t['afmt']))   
-        self.mw.col.models.save()
-        self.mw.col.models.flush()
+            self.mw.col.models.save(model)
         return variantCheck and stCheck and readingCheck and wrapperCheck 
 
     def fieldExists(self, field):

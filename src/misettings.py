@@ -20,7 +20,7 @@ from .miutils import miInfo, miAsk
 from operator import itemgetter
 
 
-versionNumber = "ver. 1.1.031"
+versionNumber = "ver. 1.2.0"
 
 class MigakuSVG(QSvgWidget):
     clicked=pyqtSignal()

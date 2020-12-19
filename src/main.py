@@ -71,7 +71,7 @@ def loadAllProfileInformation():
         try:
             tempCol = Collection(cpath)
             noteTypes = tempCol.models.all()
-            tempCol.db.close()
+            tempCol.close()
             tempCol = None
             noteTypeDict = {}
             for note in noteTypes:
@@ -82,7 +82,7 @@ def loadAllProfileInformation():
                     noteTypeDict[note['name']]["fields"].append(f['name'])
             colArray[prof] = noteTypeDict
         except:
-            miInfo('<b>Warning:</b><br>Your Anki collection could not be loaded, as a result the Migaku Japanese Add-on settings menu will not work correctly. This problem typically occurs when creating a new Anki profile. You can <b>fix this issue by simply restarting Anki after loading your new profile for the first time.<b>', level='wrn')
+            miInfo('<b>Warning:</b><br>One of your profiles could not be loaded. This usually happens if you\'ve just created a new profile and are opening it for the first time.The issue should be fixed after restarting Anki.If it persists, then your profile is corrupted in some way.\n\nYou can fix this corruption by exporting your collection, importing it into a new profile, and then deleting your previous profile. <b>', level='wrn')
 
 
 AnkiQt.loadProfile = wrap(AnkiQt.loadProfile, loadCollectionArray, 'before')
