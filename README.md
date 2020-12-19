@@ -12,7 +12,7 @@
 </p>
 
 
-> An Anki add-on that makes it easier to edit cards while reviewing.
+> An Anki add-on that adds various helpful features for Chinese learners, including reading and tone coloring, simplified or traditional variant generation and support for Cantonese Jyutping, Bopomofo/Zhuyin, and Pinyin!
 
 ### Table of Contents
 
