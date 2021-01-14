@@ -18,9 +18,10 @@ from os.path import dirname, join
 import platform
 from .miutils import miInfo, miAsk
 from operator import itemgetter
+from aqt.theme import theme_manager
 
 
-versionNumber = "ver. 1.2.0"
+versionNumber = "ver. 1.2.1"
 
 class MigakuSVG(QSvgWidget):
     clicked=pyqtSignal()
@@ -555,7 +556,7 @@ class SettingsGui(QScrollArea):
 
     def getAFTable(self):
         afTable = QTableWidget(self)
-        if isWin and platform.release() == '10':
+        if isWin and platform.release() == '10' and theme_manager.night_mode != True:
             afTable.setStyleSheet(
         "QHeaderView::section{"
             "border-top:0px solid #D8D8D8;"
@@ -1275,6 +1276,9 @@ class SettingsGui(QScrollArea):
 
 
         migakuInfo = QLabel("Migaku:")
+        migakuInfoSite = self.getSVGWidget('migaku.svg')
+        migakuInfoSite.setCursor(QCursor(Qt.PointingHandCursor))
+
         migakuInfoYT = self.getSVGWidget('Youtube.svg')
         migakuInfoYT.setCursor(QCursor(Qt.PointingHandCursor))
 
@@ -1285,6 +1289,7 @@ class SettingsGui(QScrollArea):
         migakuPatreonIcon = self.getSVGWidget('Patreon.svg')
         migakuPatreonIcon.setCursor(QCursor(Qt.PointingHandCursor))
         migakuAboutLinksHL3.addWidget(migakuInfo)
+        migakuAboutLinksHL3.addWidget(migakuInfoSite)
         migakuAboutLinksHL3.addWidget(migakuInfoYT)
         migakuAboutLinksHL3.addWidget(migakuInfoTW)
         migakuAboutLinksHL3.addWidget(migakuPatreonIcon)
@@ -1308,7 +1313,7 @@ class SettingsGui(QScrollArea):
         migakuThanks.setTitle('A Word of Thanks')
         migakuThanksVL = QVBoxLayout()
         migakuThanks.setStyleSheet("QGroupBox { font-weight: bold; } ")
-        migakuThanksText = QLabel("Thanks so much to all Migaku supporters! I would not have been able to develop this add-on or any other Migaku project without your support!")
+        migakuThanksText = QLabel("Thanks so much to all Migaku supporters! We would not have been able to develop this add-on or any other Migaku project without your support!")
         migakuThanksText.setOpenExternalLinks(True);
         migakuThanksText.setWordWrap(True);
         migakuThanksVL.addWidget(migakuThanksText)
@@ -1323,8 +1328,9 @@ class SettingsGui(QScrollArea):
         tab4vl.addStretch()
         tab_4.setLayout(tab4vl)
 
+        migakuInfoSite.clicked.connect(lambda: openLink('https://migaku.io'))
         migakuPatreonIcon.clicked.connect(lambda: openLink('https://www.patreon.com/Migaku'))
-        migakuInfoYT.clicked.connect(lambda: openLink('https://www.youtube.com/c/ImmerseWithYoga'))
+        migakuInfoYT.clicked.connect(lambda: openLink('https://www.youtube.com/channel/UCQFe3x4WAgm7joN5daMm5Ew'))
         migakuInfoTW.clicked.connect(lambda: openLink('https://twitter.com/Migaku_Yoga'))
         gitHubIcon.clicked.connect(lambda: openLink('https://github.com/migaku-official'))
         return tab_4
