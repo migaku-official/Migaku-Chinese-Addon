@@ -10,7 +10,7 @@
   "ReadingType": "pinyin",
   "SimplifiedField": "Simplified;overwrite",
   "TraditionalField": "Traditional;overwrite",
-  "SimpTradField": "Traditional;overwrite",
+  "SimpTradField": "Traditional,Variant;overwrite",
   "traditionalIcons": false,
   "FontSize": 75,
   "CantoneseTones123456": [
@@ -34,7 +34,73 @@
     "hanzi;all;Migaku Chinese (TW);Reading;Expression;front;bopomofo",
     "coloredhanzireading;all;Migaku Chinese (TW);Reading;Expression;back;bopomofo",
     "coloredhover;all;Migaku Chinese (TW);Reading;Meaning;back;bopomofo",
-    "hanzi;all;Migaku Chinese (TW);Reading;Simplified;back;bopomofo"
+    "hanzi;all;Migaku Chinese (TW);Reading;Simplified;back;bopomofo",
+
+    "hanzi;all;Migaku Chinese(CN) Sentence;Standard;Sentence;front;pinyin",
+    "coloredhanzireading;all;Migaku Chinese(CN) Sentence;Standard;Sentence;back;pinyin",
+    "coloredhanzireading;all;Migaku Chinese(CN) Sentence;Standard;Target Word;back;pinyin",
+    "coloredhover;all;Migaku Chinese(CN) Sentence;Standard;Definitions;back;pinyin",
+    "coloredhanzi;all;Migaku Chinese(CN) Sentence;Standard;Variant;back;pinyin",
+    
+    "hanzi;all;Migaku Chinese(CN) Vocabulary;Standard;Target Word;front;pinyin",
+    "coloredhanzireading;all;Migaku Chinese(CN) Vocabulary;Standard;Sentence;back;pinyin",
+    "coloredhanzireading;all;Migaku Chinese(CN) Vocabulary;Standard;Target Word;back;pinyin",
+    "coloredhover;all;Migaku Chinese(CN) Vocabulary;Standard;Definitions;back;pinyin",
+    "coloredhanzi;all;Migaku Chinese(CN) Vocabulary;Standard;Variant;back;pinyin",
+
+    "coloredhanzireading;all;Migaku Chinese(CN) Audio Sentence;Standard;Sentence;back;pinyin",
+    "coloredhanzireading;all;Migaku Chinese(CN) Audio Sentence;Standard;Target Word;back;pinyin",
+    "coloredhover;all;Migaku Chinese(CN) Audio Sentence;Standard;Definitions;back;pinyin",
+    "coloredhanzi;all;Migaku Chinese(CN) Audio Sentence;Standard;Variant;back;pinyin",
+
+    "coloredhanzireading;all;Migaku Chinese(CN) Audio Vocabulary;Standard;Sentence;back;pinyin",
+    "coloredhanzireading;all;Migaku Chinese(CN) Audio Vocabulary;Standard;Target Word;back;pinyin",
+    "coloredhover;all;Migaku Chinese(CN) Audio Vocabulary;Standard;Definitions;back;pinyin",
+    "coloredhanzi;all;Migaku Chinese(CN) Audio Vocabulary;Standard;Variant;back;pinyin",
+
+    "hanzi;all;Migaku Chinese(TW) Sentence;Standard;Sentence;front;bopomofo",
+    "coloredhanzireading;all;Migaku Chinese(TW) Sentence;Standard;Sentence;back;bopomofo",
+    "coloredhanzireading;all;Migaku Chinese(TW) Sentence;Standard;Target Word;back;bopomofo",
+    "coloredhover;all;Migaku Chinese(TW) Sentence;Standard;Definitions;back;bopomofo",
+    "coloredhanzi;all;Migaku Chinese(TW) Sentence;Standard;Variant;back;bopomofo",
+    
+    "hanzi;all;Migaku Chinese(TW) Vocabulary;Standard;Target Word;front;bopomofo",
+    "coloredhanzireading;all;Migaku Chinese(TW) Vocabulary;Standard;Sentence;back;bopomofo",
+    "coloredhanzireading;all;Migaku Chinese(TW) Vocabulary;Standard;Target Word;back;bopomofo",
+    "coloredhover;all;Migaku Chinese(TW) Vocabulary;Standard;Definitions;back;bopomofo",
+    "coloredhanzi;all;Migaku Chinese(TW) Vocabulary;Standard;Variant;back;bopomofo",
+
+    "coloredhanzireading;all;Migaku Chinese(TW) Audio Sentence;Standard;Sentence;back;bopomofo",
+    "coloredhanzireading;all;Migaku Chinese(TW) Audio Sentence;Standard;Target Word;back;bopomofo",
+    "coloredhover;all;Migaku Chinese(TW) Audio Sentence;Standard;Definitions;back;bopomofo",
+    "coloredhanzi;all;Migaku Chinese(TW) Audio Sentence;Standard;Variant;back;bopomofo",
+
+    "coloredhanzireading;all;Migaku Chinese(TW) Audio Vocabulary;Standard;Sentence;back;bopomofo",
+    "coloredhanzireading;all;Migaku Chinese(TW) Audio Vocabulary;Standard;Target Word;back;bopomofo",
+    "coloredhover;all;Migaku Chinese(TW) Audio Vocabulary;Standard;Definitions;back;bopomofo",
+    "coloredhanzi;all;Migaku Chinese(TW) Audio Vocabulary;Standard;Variant;back;bopomofo",
+
+    "hanzi;all;Migaku Cantonese Sentence;Standard;Sentence;front;jyutping",
+    "coloredhanzireading;all;Migaku Cantonese Sentence;Standard;Sentence;back;jyutping",
+    "coloredhanzireading;all;Migaku Cantonese Sentence;Standard;Target Word;back;jyutping",
+    "coloredhover;all;Migaku Cantonese Sentence;Standard;Definitions;back;jyutping",
+    "coloredhanzi;all;Migaku Cantonese Sentence;Standard;Variant;back;jyutping",
+    
+    "hanzi;all;Migaku Cantonese Vocabulary;Standard;Target Word;front;jyutping",
+    "coloredhanzireading;all;Migaku Cantonese Vocabulary;Standard;Sentence;back;jyutping",
+    "coloredhanzireading;all;Migaku Cantonese Vocabulary;Standard;Target Word;back;jyutping",
+    "coloredhover;all;Migaku Cantonese Vocabulary;Standard;Definitions;back;jyutping",
+    "coloredhanzi;all;Migaku Cantonese Vocabulary;Standard;Variant;back;jyutping",
+
+    "coloredhanzireading;all;Migaku Cantonese Audio Sentence;Standard;Sentence;back;jyutping",
+    "coloredhanzireading;all;Migaku Cantonese Audio Sentence;Standard;Target Word;back;jyutping",
+    "coloredhover;all;Migaku Cantonese Audio Sentence;Standard;Definitions;back;jyutping",
+    "coloredhanzi;all;Migaku Cantonese Audio Sentence;Standard;Variant;back;jyutping",
+
+    "coloredhanzireading;all;Migaku Cantonese Audio Vocabulary;Standard;Sentence;back;jyutping",
+    "coloredhanzireading;all;Migaku Cantonese Audio Vocabulary;Standard;Target Word;back;jyutping",
+    "coloredhover;all;Migaku Cantonese Audio Vocabulary;Standard;Definitions;back;jyutping",
+    "coloredhanzi;all;Migaku Cantonese Audio Vocabulary;Standard;Variant;back;jyutping"
   ],
   "displayAgain": true
 }

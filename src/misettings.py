@@ -122,6 +122,7 @@ class SettingsGui(QScrollArea):
         self.setWidget(self.innerWidget)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.setWidgetResizable(True)
         self.show()
 
 
