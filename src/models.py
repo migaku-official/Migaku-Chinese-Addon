@@ -109,15 +109,14 @@ class MIChineseModels():
 }
 
 .migaku-card-image img {
-  height: 250px;
   width: 90vw;
   max-width: 600px;
-  object-fit: cover;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
 }
-
-
 
 .migaku-sentence,
 .migaku-variant,
@@ -385,7 +384,7 @@ class MIChineseModels():
     def addExportTemplatesToConfig(self, dirName, name):
 
         templates = {
-            name + "Sentence": {
+            name + " Sentence": {
               "noteType": "Migaku " + name + " Sentence",
               "sentence": "Sentence",
               "secondary": "Translation",
@@ -403,7 +402,7 @@ class MIChineseModels():
               },
               "separator": "<br><br>"
             }, 
-            name + "Vocabulary": {
+            name + " Vocabulary": {
               "noteType": "Migaku " + name + " Vocabulary",
               "sentence": "Sentence",
               "secondary": "Translation",
@@ -421,7 +420,7 @@ class MIChineseModels():
               },
               "separator": "<br><br>"
             }, 
-            name + "Audio Sentence": {
+            name + " Audio Sentence": {
               "noteType": "Migaku " + name + " Audio Sentence",
               "sentence": "Sentence",
               "secondary": "Translation",
@@ -439,7 +438,7 @@ class MIChineseModels():
               },
               "separator": "<br><br>"
             }, 
-            name + "Audio Vocabulary": {
+            name + " Audio Vocabulary": {
               "noteType": "Migaku " + name + " Audio Vocabulary",
               "sentence": "Sentence",
               "secondary": "Translation",
