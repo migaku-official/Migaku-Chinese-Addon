@@ -44,8 +44,8 @@ class MIChineseModels():
         self.modelList = self.getModelList()
         self.style ="""
 
-# @font-face { font-family: simsun; src: url('_simsun.ttf'); }
-# @font-face { font-family: times; src: url('_times.ttf'); }
+@font-face { font-family: simsun; src: url('_simsun.ttf'); }
+@font-face { font-family: times; src: url('_times.ttf'); }
 
 
 .card,
