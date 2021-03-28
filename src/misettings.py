@@ -21,7 +21,7 @@ from operator import itemgetter
 from aqt.theme import theme_manager
 
 
-versionNumber = "ver. 1.2.1"
+versionNumber = "ver. 1.2.3"
 
 class MigakuSVG(QSvgWidget):
     clicked=pyqtSignal()
