@@ -342,21 +342,22 @@ class MIChineseModels():
         config = self.mw.addonManager.getConfig(__name__)
         add = False
         for model in self.modelList:
-            if model[0].startswith('Migaku Chinese(CN)') and config['addSimpNote']:
-                self.addModel(model)
-                self.addExportTemplates('Chinese(CN)')
-                self.maybeAddActiveFieldsToConfig(config, 'Chinese(CN)', "pinyin")
-                add = True
-            elif model[0].startswith('Migaku Chinese(TW)') and config['addTradNote']:
-                self.addModel(model)
-                self.addExportTemplates('Chinese(TW)')
-                self.maybeAddActiveFieldsToConfig(config, 'Chinese(TW)', "bopomofo")
-                add = True
-            elif model[0].startswith('Migaku Cantonese') and config['addCantoNote']:
-                self.addModel(model)
-                self.addExportTemplates('Cantonese')
-                self.maybeAddActiveFieldsToConfig(config, 'Cantonese', "jyutping")
-                add = True
+            if not self.mw.col.models.byName(model[0]):
+                if model[0].startswith('Migaku Chinese(CN)') and config['addSimpNote']:
+                    self.addModel(model)
+                    self.addExportTemplates('Chinese(CN)')
+                    self.maybeAddActiveFieldsToConfig(config, 'Chinese(CN)', "pinyin")
+                    add = True
+                elif model[0].startswith('Migaku Chinese(TW)') and config['addTradNote']:
+                    self.addModel(model)
+                    self.addExportTemplates('Chinese(TW)')
+                    self.maybeAddActiveFieldsToConfig(config, 'Chinese(TW)', "bopomofo")
+                    add = True
+                elif model[0].startswith('Migaku Cantonese') and config['addCantoNote']:
+                    self.addModel(model)
+                    self.addExportTemplates('Cantonese')
+                    self.maybeAddActiveFieldsToConfig(config, 'Cantonese', "jyutping")
+                    add = True
         if add:
             self.moveFontToMediaDir('_times.ttf')
             self.moveFontToMediaDir('_simsun.ttf')
@@ -465,18 +466,17 @@ class MIChineseModels():
         
 
     def addModel(self, model):
-        if not self.mw.col.models.byName(model[0]):
-            modelManager = self.mw.col.models
-            newModel = modelManager.new(model[0])
-            for fieldName in model[1]:
-                field = modelManager.newField(fieldName)
-                modelManager.addField(newModel, field)
-            template = modelManager.newTemplate('Standard')
-            template['qfmt'] = model[2]
-            template['afmt'] = model[3]
-            newModel['css'] = self.style
-            modelManager.addTemplate(newModel, template)
-            modelManager.add(newModel)
+        modelManager = self.mw.col.models
+        newModel = modelManager.new(model[0])
+        for fieldName in model[1]:
+            field = modelManager.newField(fieldName)
+            modelManager.addField(newModel, field)
+        template = modelManager.newTemplate('Standard')
+        template['qfmt'] = model[2]
+        template['afmt'] = model[3]
+        newModel['css'] = self.style
+        modelManager.addTemplate(newModel, template)
+        modelManager.add(newModel)
         
     def moveFontToMediaDir(self, filename):
         src = join(dirname(__file__), filename)
