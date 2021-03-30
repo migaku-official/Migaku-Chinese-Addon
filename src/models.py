@@ -78,6 +78,10 @@ class MIChineseModels():
   height: 53px;
 }
 
+rt{
+  font-size: 70% !important;
+}
+
 .migaku-card {
   background: white;
   width: 90vw;
