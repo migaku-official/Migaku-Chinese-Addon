@@ -261,7 +261,7 @@ class ChineseHandler():
                 if count == len(text):
                     finished = True
             if editor:
-                editor.web.eval(self.commonJS +  self.insertHTMLJS % newStr.replace('"', '\\"'))
+                editor.web.eval(self.commonJS +  self.insertHTMLJS % newStr.replace('"', '\\"').replace('\n', ''))
                 # note[field] = newStr
                 self.addVariants(text, note, editor)
                 self.addSimpTrad(text, note, editor)

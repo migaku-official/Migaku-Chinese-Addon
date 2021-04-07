@@ -78,10 +78,6 @@ class MIChineseModels():
   height: 53px;
 }
 
-rt{
-  font-size: 70% !important;
-}
-
 .migaku-card {
   background: white;
   width: 90vw;
@@ -131,13 +127,11 @@ rt{
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 18px;
-  line-height: 19px;
 }
 
 
 .migaku-sentence{
-    font-size: 25px;
-  line-height: 25px;
+  font-size: 25px;
 }
 
 .migaku-translation, .migaku-variant{
@@ -159,16 +153,6 @@ rt{
     grid-template-areas:
     "word-audio word word word word word word word" "sentence-audio sentence sentence sentence sentence sentence sentence sentence" "variant variant variant variant variant variant variant variant" "translation translation translation translation translation translation translation translation" "definition definition definition definition definition definition definition definition";
   }
-
-
-  .migaku-card--back .editableField:nth-of-type(1){
-     font-size:24px;
-  }
-
-  .migaku-card--back .editableField:nth-of-type(3){
-     font-size:25px;
-  }
-
 
   .editableField[data-field="Target Word"]{
     grid-area: word;

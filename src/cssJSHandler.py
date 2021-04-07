@@ -278,41 +278,9 @@ class CSSJSHandler():
         return False
 
     def checkVariantSyntax(self):
-        syntaxErrors = ''
-        for variant in ['SimplifiedField', 'TraditionalField']:
-            varAr = self.config[variant].split(';')
-            if len(varAr) not in [2,3] or (len(varAr) == 3 and varAr[1].lower() != 'add'):
-                syntaxErrors += '\nThe "' + variant + '" configuration "'+ self.config[variant] +'" is incorrect. The syntax is invalid.'
-            else:
-                selFields = varAr[0].split(',')
-                for selField in selFields:
-                    if not self.fieldExists(selField):
-                        syntaxErrors += '\nThe "' + variant + '" configuration "'+ self.config[variant] +'" is incorrect. At least one of the specified fields does not exist in your collection.'
-                        break   
-                if varAr[1].lower() not in ['overwrite', 'add', 'no']:
-                    syntaxErrors += '\nThe "' + variant + '" configuration "'+ self.config[variant] +'" is incorrect. Please ensure that second value is either "overwrite", "add", or "no".'    
-        if syntaxErrors != '':
-            miInfo('Please make sure the syntax is as follows "field;type(;separator)".Remember that only when using "add" can you specify a separator value. The syntax is incorrect for the following entries:' + syntaxErrors, level="err")
-            return False
         return True
 
     def checkSimpTradSyntax(self):
-        syntaxErrors = ''
-        simpTrad = self.config['SimpTradField']
-        varAr = simpTrad.split(';')
-        if len(varAr) not in [2,3,4] or (len(varAr) == 4 and varAr[1].lower() != 'add'):
-            syntaxErrors += '\nThe "SimpTradField" configuration "'+ simpTrad +'" is incorrect. The syntax is invalid.'
-        else:
-            altFields = varAr[0].split(',')
-            for altField in altFields:
-                if not self.fieldExists(altField):
-                    syntaxErrors += '\nThe "SimpTradField" configuration "'+ simpTrad +'" is incorrect. At least one of the specified fields does not exist in your collection.'    
-                    break
-            if varAr[1].lower() not in ['overwrite', 'add', 'no']:
-                syntaxErrors += '\nThe "SimpTradField" configuration "'+ simpTrad +'" is incorrect. Please ensure that second value is either "overwrite", "add", or "no".'    
-        if syntaxErrors != '':
-            miInfo('Please make sure the syntax is as follows "field;type(;separator(;separator))". Remember that only when using "add" as the type can you specify 2 separator values. The syntax is incorrect for the following entries:' + syntaxErrors, level="err")
-            return False
         return True
 
     def checkReadingType(self):
